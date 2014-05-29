@@ -57,7 +57,7 @@ public class InfixToPostfix {
         opMap.put("*", 2);
         opMap.put("/", 2);
         opMap.put("^", 3);
-        if (validateExpression(infix)) {
+        if (isInvalidExpression(infix)) {
             return "Illegal expression";
         } else {
             return postFixConverter(infix, data, opMap);
@@ -104,7 +104,7 @@ public class InfixToPostfix {
 
     // Accepts an infix expression and returns true if it's valid, false if not.
     // The recursive call will only begin if this evaluates to true.
-    public static boolean validateExpression(String infix) {
+    public static boolean isInvalidExpression(String infix) {
         int openParens = 0;
         int closeParens = 0;
         boolean error = false;
