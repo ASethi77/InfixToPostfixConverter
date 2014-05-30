@@ -133,7 +133,7 @@ public class InfixToPostfix {
     // post: true if the next token in the infix is a valid number, false if not
     public static boolean isNumber(String next) {
         boolean isNumber = true;
-        try { // Valid number if it can be parsed as Double, operator if not
+        try {
             Double.parseDouble(next);
         } catch (NumberFormatException e) {
             isNumber = false; 
